@@ -18,7 +18,7 @@ export class LapozoComponent implements OnInit {
   
     
   productList: Product[] = this.productService.list;
-  lapozoList: Product[] = this.productList;  
+  lapozoList: Product[] = this.productList.filter((item,key)=>key<5);  
   
   constructor(
     private productService: ProductService,    

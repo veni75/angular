@@ -1,20 +1,5 @@
-<div class="container">
-    <div class="row">
-        <div class="col-12 col-md-3 lg-2" *ngFor="let product of products">
-            <app-product-card [product]="lapozoList[0]"></app-product-card>
-        </div>
-        <div class="col-12 col-md-3 lg-2">
-            <app-product-card [product]="lapozoList[1]"></app-product-card>
-        </div>
-        <div class="col-12 col-md-3 lg-2">
-            <app-product-card [product]="lapozoList[2]"></app-product-card>
-        </div>
-        <div class="col-12 col-md-3 lg-2">
-            <app-product-card [product]="lapozoList[3]"></app-product-card>
-        </div>
-        <div class="col-12 col-md-3 lg-2">
-            <app-product-card [product]="lapozoList[4]"></app-product-card>
-        </div>
-
+<div class="row">
+    <div class="col-12 col-md-2" *ngFor="let product of lapozoList">
+        <app-product-card [product]="product"></app-product-card>
     </div>
 </div>
