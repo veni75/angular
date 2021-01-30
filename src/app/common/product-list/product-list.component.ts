@@ -19,10 +19,15 @@ export class ProductListComponent implements OnInit {
   productList: Product[] = this.productService.list;
   kategoria1List: Product[] = this.productList.filter(item => item.catId === 1);
   kategoria2List: Product[] = this.productList.filter(item => item.catId === 2);
+  phrase: string = '';
 
   constructor(
     private productService: ProductService,
   ) { }
+
+  onChangePhrase(event: Event): void {
+    this.phrase = (event.target as HTMLInputElement).value;
+  }
 
   ngOnInit(): void {
   }
