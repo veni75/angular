@@ -14,7 +14,7 @@ export class ProductListComponent implements OnInit {
   @Input() products: Product[];
   @Input() kategoria1: Product[];
   @Input() kategoria2: Product[];
-  @Input() phraseString: string = '';
+  @Input() phraseString: string='';
 
   productList: Product[] = this.productService.list;
   kategoria1List: Product[] = this.productList.filter(item => item.catId === 1);

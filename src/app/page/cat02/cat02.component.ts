@@ -10,19 +10,15 @@ import { ProductService } from '../../service/product.service';
 export class Cat02Component implements OnInit {
   product: Product = new Product();
   productList: Product[] = this.productService.list;
-  phrase: string = '';
+  
   kiemeltList: Product[] = this.productList.filter(item=>item);
   kategoria2List: Product[] = this.productList.filter(item => item.catId === 2);
   kiemelt: boolean = true;
-  
+
   constructor(
     private productService: ProductService,
   ) { }
 
-  onChangePhrase(event: Event): void {
-    this.phrase = (event.target as HTMLInputElement).value;
-  }
-  
   ngOnInit(): void {
   }
 
