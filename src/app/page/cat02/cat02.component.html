@@ -1,51 +1,15 @@
-<nav class="navbar navbar-expand-sm navbar-light bg-light sticky-top">
-    
-    <div class="collapse navbar-collapse" id="collapsibleNavId">
+
       
       <form class="form-inline my-2 my-lg-0">
         
         <input (keyup)="onChangePhrase($event)"  class="form-control mr-sm-2" type="text" placeholder="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
       </form>
-    </div>
-  </nav>
-<div class="container-fluid">
-    <h1>Kiemelt termékek</h1>
-    <div class="row">
-        <div class="col-2">
-            <app-product-card [product]="productList" class="card"></app-product-card>
-        </div>
-        <div class="col-2">
-            <app-product-card [product]="productList" class="card"></app-product-card>
-        </div>
-        <div class="col-2">
-            <app-product-card [product]="productList" class="card"></app-product-card>
-        </div>
-        <div class="col-2">
-            <app-product-card [product]="productList" class="card"></app-product-card>
-        </div>
-        <div class="col-2">
-            <app-product-card [product]="productList" class="card"></app-product-card>
-        </div>
-    </div>
-    <h1>Akciós termékek</h1>
-    <div class="row">
-        <div class="col-2">
-            <app-product-card [product]="productList" class="card"></app-product-card>
-        </div>
-        <div class="col-2">
-            <app-product-card [product]="productList" class="card"></app-product-card>
-        </div>
-        <div class="col-2">
-            <app-product-card [product]="productList" class="card"></app-product-card>
-        </div>
-        <div class="col-2">
-            <app-product-card [product]="productList" class="card"></app-product-card>
-        </div>
-        <div class="col-2">
-            <app-product-card [product]="productList" class="card"></app-product-card>
-        </div>
-    </div>
-</div>
-<app-product-list [products]="productList" [phraseString]="phrase"></app-product-list>
-
+    
+      <h1>Kiemelt termékek</h1>
+      <div class="row">
+        <app-lapozo [productK]="kiemeltList"></app-lapozo>
+      </div>
+    
+      <h1>Kategória2 termékek</h1>
+    <app-product-list [kategoria2]="kategoria2List" [phraseString]="phrase"></app-product-list>

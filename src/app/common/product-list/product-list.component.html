@@ -1,16 +1,7 @@
-<div class="container-fluid">
-    <h1>Kategória termékek</h1>
-    <div class="row">
-        <div class="col-12 col-md-4 lg-2">
-            <!-- *ngFor="let product of products"> -->
-            <app-product-card [product]="productList[0]"></app-product-card>
-            <app-product-card [product]="productList[1]"></app-product-card>
-            <app-product-card [product]="productList[2]"></app-product-card>
-            <app-product-card [product]="productList[3]"></app-product-card>
-            <app-product-card [product]="productList[4]"></app-product-card>
-            <app-product-card [product]="productList[5]"></app-product-card>
-            <app-product-card [product]="productList[6]"></app-product-card>
-        </div>
-
+<div class="row">
+    <div class="col-12 col-md-4 lg-2" *ngFor="let product of productList">
+        <app-product-card [product]="product"></app-product-card>
+        
     </div>
+
 </div>
