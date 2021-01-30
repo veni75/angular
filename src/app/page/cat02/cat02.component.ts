@@ -13,6 +13,8 @@ export class Cat02Component implements OnInit {
   phrase: string = '';
   kiemeltList: Product[] = this.productList.filter(item=>item);
   kategoria2List: Product[] = this.productList.filter(item => item.catId === 2);
+  kiemelt: boolean = true;
+  
   constructor(
     private productService: ProductService,
   ) { }

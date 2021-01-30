@@ -12,16 +12,19 @@ import { ProductService } from '../../service/product.service';
 export class HomeComponent implements OnInit {
   product: Product = new Product();
   productList: Product[] = this.productService.list;
-  
-  kiemeltList: Product[] = this.productList.filter( product => product.featured )
-    .sort( () => 0.5 - Math.random())
+
+  kiemeltList: Product[] = this.productList.filter(product => product.featured)
+    .sort(() => 0.5 - Math.random())
     .slice(0, 5);
 
-  akciosList:Product[] = this.productList.filter(item=>item.active);
+  kiemelt: boolean = true;
+  akcios: boolean = true;
+
+  akciosList: Product[] = this.productList.filter(item => item.active);
 
   constructor(
     private productService: ProductService,
-    
+
   ) { }
 
   ngOnInit(): void {

@@ -1,5 +1,12 @@
-<div class="row">
-    <div class="col-12 col-md-4 lg-2" *ngFor="let product of productList">
+<div class="row" *ngIf="kategoria1">
+    <div class="col-md-4" *ngFor="let product of kategoria1List">
+        <app-product-card [product]="product"></app-product-card>
+        
+    </div>
+
+</div>
+<div class="row" *ngIf="kategoria2">
+    <div class="col-md-4" *ngFor="let product of kategoria2List">
         <app-product-card [product]="product"></app-product-card>
         
     </div>

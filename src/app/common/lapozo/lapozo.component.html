@@ -1,5 +1,10 @@
-<div class="row">
-    <div class="col-12 col-md-2" *ngFor="let product of lapozoList">
+<div class="row" *ngIf="productK">
+    <div class="col-md-2" *ngFor="let product of lapozoListK">
+        <app-product-card [product]="product"></app-product-card>
+    </div>
+</div>
+<div class="row" *ngIf="productA">
+    <div class="col-md-2" *ngFor="let product of lapozoListA">
         <app-product-card [product]="product"></app-product-card>
     </div>
 </div>

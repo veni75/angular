@@ -10,10 +10,11 @@ import { ProductService } from '../../service/product.service';
 export class Cat01Component implements OnInit {
   product: Product = new Product();
   productList: Product[] = this.productService.list;
+  kiemelt: boolean = true;
 
   phrase: string = '';
   kiemeltList: Product[] = this.productList.filter(item => item);
-  kategoria1List: Product[] = this.productList.filter(item => item.catId === 1);
+  kategoria1List: boolean=true;
 
   constructor(
     private productService: ProductService,

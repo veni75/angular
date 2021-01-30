@@ -18,8 +18,17 @@ export class LapozoComponent implements OnInit {
   
     
   productList: Product[] = this.productService.list;
-  lapozoList: Product[] = this.productList.filter((item,key)=>key<5);  
-  
+  //lapozoList: Product[] = this.productList.filter((item,key)=>key<5);  
+
+  lapozoListK: Product[] = this.productList.filter( product => product.featured );
+    //.sort( () => 0.5 - Math.random())
+    //.slice(0, 4);
+    
+
+  lapozoListA: Product[] = this.productList.filter( product => product.active );
+    //.sort( () => 0.5 - Math.random())
+    //.slice(0, 4);
+
   constructor(
     private productService: ProductService,    
   ) { }

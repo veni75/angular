@@ -1,15 +1,13 @@
+<form class="form-inline my-2 my-lg-0">
 
-      
-      <form class="form-inline my-2 my-lg-0">
-        
-        <input (keyup)="onChangePhrase($event)"  class="form-control mr-sm-2" type="text" placeholder="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
-    
-      <h1>Kiemelt termékek</h1>
-      <div class="row">
-        <app-lapozo [productK]="kiemeltList"></app-lapozo>
-      </div>
-    
-      <h1>Kategória2 termékek</h1>
-    <app-product-list [kategoria2]="kategoria2List" [phraseString]="phrase"></app-product-list>
+    <input (keyup)="onChangePhrase($event)" class="form-control mr-sm-2" type="text" placeholder="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+</form>
+
+<h1>Kiemelt termékek</h1>
+<div class="row">
+    <app-lapozo [productK]="kiemelt"></app-lapozo>
+</div>
+
+<h1>Kategória2 termékek</h1>
+<app-product-list [kategoria2]="kategoria2List" [phraseString]="phrase"></app-product-list>
